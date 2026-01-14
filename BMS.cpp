@@ -62,6 +62,7 @@ public:
 	virtual ~User() {}
 };
 
+//Customer class inherits from the Public User class...
 class Customer : public User
 {
 private:
@@ -74,6 +75,7 @@ public:
 	{
 	}
 
+	//Returns a bool to after checking the login details
 	bool login()
 	{
 		string enteredPin, enteredpass;
@@ -156,6 +158,7 @@ public:
 
 	}
 };
+
 
 class Account
 {
@@ -316,7 +319,7 @@ public:
 			index++;
 			if (index >= size)
 			{
-				break; // to avoid buffer
+				break; // to avoid buffer overflow
 			}
 		}
 
@@ -3508,4 +3511,5 @@ int main()
 	}
 	return 0;
 }
+
 
